@@ -1,0 +1,88 @@
+@import '../../common/css/header';
+@import '../../common/css/footer';
+
+//*------------------*
+//*  works
+//*------------------*
+.work {
+  .section__ttl {
+    @include tablet {
+      font-size: 6vw;
+      margin-top: 200px;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 100px auto 200px;
+    text-align: center;
+    @include tablet {
+      flex-direction: column;
+    }
+    .content-l {
+      width: 46%;
+      margin-right: 4%;
+      @include tablet {
+        width: 100%;
+        margin-right: 0;
+      }
+      .img {
+        transition-property: transform;
+        transition-duration: .3s;
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
+    }
+    .content-r {
+      width: 46%;
+      text-align: left;
+      @include rem(16);
+      @include tablet {
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+      }
+      &__url {
+        color: $color-black;
+        text-decoration: underline;
+        margin-bottom: 40px;
+          @include tablet {
+            margin-bottom: 100px;
+            font-size: 3vw;
+          }
+      }
+      th {
+        padding: 20px 0;
+        vertical-align: text-top;
+        @include tablet {
+          padding: 50px 0;
+        }
+      }
+      td {
+        vertical-align: text-top;
+        padding: 20px 10px;
+        line-height: 2rem;
+        text-align: left;
+        a {
+          color: $color-black;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+//*------------------*
+//*  contact
+//*------------------*
+.contact {
+  button {
+    a {
+      background-color: #333;
+      letter-spacing: 0.2em;
+    }
+  }
+}

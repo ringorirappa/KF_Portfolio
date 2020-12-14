@@ -1,0 +1,66 @@
+//*------------------*
+//*  footer
+//*------------------*
+.footer {
+  width: 100%;
+  color: $color-white;
+  .page-top {
+    background: $color-black;
+    padding: 20px 0;
+    cursor: pointer;
+    &:hover {
+      opacity: .7;
+      transition: .3s;
+    }
+    img {
+      max-width: 30px;
+      margin: 0 auto;
+    }
+  }
+  &__inner {
+    background-color: $color-green;
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+    padding: 1% 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  &__ttl {
+    font-family: Audiowide;
+    @include rem(36);
+    @include tablet {
+      font-size: 5vw;
+    }
+  }
+  .nav {
+    margin-right: auto;
+    margin-left: 7%;
+    @include rem(18);
+    font-weight: bold;
+    font-family: $font-en;
+    letter-spacing: 0.18em;
+    @include tablet {
+      font-size: 1.5vw;
+    }
+    @include mobile {
+      display: none;
+    }
+    &__list {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 3vw;
+      &:last-child {
+        margin-right: 0;
+      }
+      .twitter-logo {
+        width: 30px;
+        @include tablet {
+          width: 4vw;
+        }
+      }
+    }
+  }
+}

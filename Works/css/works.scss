@@ -1,0 +1,115 @@
+@import '../../common/css/header';
+@import '../../common/css/footer';
+
+//*------------------*
+//*  works.fv
+//*------------------*
+.works-fv {
+  &__wrapper {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20%;
+    @include tablet {
+      padding-left: 0;
+      flex-direction: column-reverse;
+    }
+    h2 {
+      font-family: Audiowide;
+      width: 30%;
+      margin-right: 5%;
+      @include rem(60);
+      letter-spacing: .2em;
+      color: $color-black;
+      @include tablet {
+        width: 100%;
+        margin: 50px 10% 0;
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+  }
+  &__bg {
+    background: url(../../img/Works_FV.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 65%;
+    height: 60vh;
+    @include tablet {
+      width: 100%;
+    }
+    @include mobile {
+      height: 40vh;
+    }
+  }
+}
+
+//*------------------*
+//*  works
+//*------------------*
+.works {
+  ul {
+    display: flex;
+    justify-content: stretch;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 200px auto;
+    text-align: center;
+    li {
+      width: 30.6%;
+      margin-right: 4%;
+      margin-top: 100px;
+      @include tablet {
+        width: 48%;
+      }
+      @include mobile {
+        width: 100%;
+        margin-right: 0;
+      }
+      &:nth-child(3) {
+        margin-right: 0;
+        @include tablet {
+          margin-right: 4%;
+        }
+        @include mobile {
+          margin-right: 0;
+        }
+      }
+      &:nth-child(even) {
+        @include tablet {
+          margin-right: 0;
+        }
+      }
+      @include rem(16);
+      a {
+        color: $color-black;
+      }
+      .img {
+        transition-property: transform;
+        transition-duration: .3s;
+        &:hover {
+          transition: 0;
+          opacity: 1;
+          transform: translateY(-5px);
+        }
+      }
+      .content__ttl {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+//*------------------*
+//*  contact
+//*------------------*
+.contact {
+  button {
+    a {
+      background-color: #333;
+      letter-spacing: 0.2em;
+    }
+  }
+}
+

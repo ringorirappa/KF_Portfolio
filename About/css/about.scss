@@ -1,0 +1,285 @@
+@import '../../common/css/header';
+@import '../../common/css/footer';
+
+//*------------------*
+//*  about.fv
+//*------------------*
+.about-fv {
+  &__wrapper {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20%;
+    @include tablet {
+      padding-left: 0;
+      flex-direction: column-reverse;
+    }
+    h2 {
+      font-family: Audiowide;
+      width: 30%;
+      margin-right: 5%;
+      @include rem(60);
+      letter-spacing: .2em;
+      color: $color-black;
+      @include tablet {
+        width: 100%;
+        text-align: center;
+        margin: 50px 10% 0;
+      }
+    }
+  }
+  &__bg {
+    background: url(../../img/About_FV.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 65%;
+    height: 60vh;
+    @include tablet {
+      width: 100%;
+    }
+    @include mobile {
+      height: 40vh;
+    }
+  }
+}
+
+//*------------------*
+//*  about
+//*------------------*
+.about {
+  &__contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 250px;
+    @include tablet {
+      margin-top: 180px;
+    }
+    @include mobile {
+      display: block;
+    }
+    .content__l {
+      width: 48%;
+      margin-right: 3%;
+      text-align: center;
+      @include mobile {
+        width: 100%;
+      }
+      img {
+        margin: 0 auto;
+        border-radius: 50%;
+        max-width: 300px;
+      }
+    }
+    .content__r {
+      width: 40%;
+      @include mobile {
+        width: 100%;
+        text-align: center;
+      }
+      h3 {
+        @include rem(28);
+        letter-spacing: 0.08em;
+        span {
+          @include rem(18);
+          display: inline-block;
+          margin-left: 3%;
+          font-weight: normal;
+          @include mobile {
+            margin-left: 0;
+          }
+        }
+      }
+      p {
+        margin-top: 20px;
+      }
+      .age {
+        @include rem(18);
+        span {
+          @include rem(20);
+          display: inline-block;
+          margin-left: 2%;
+        }
+      }
+      .address {
+        @include rem(18);
+        span {
+          @include rem(14);
+          display: inline-block;
+          margin-left: 2%;
+        }
+      }
+      .hobby {
+        @include rem(14);
+        letter-spacing: 0.08em;
+      }
+    }
+  }
+}
+
+//*------------------*
+//*  contents共通
+//*------------------*
+.contents {
+  width: 100%;
+  max-width: 1200px;
+  margin: 200px auto;
+  .contents__ttl {
+    text-align: center;
+    @include rem(20);
+    color: $color-white;
+    background-color: #257b8f;
+    line-height: 4rem;
+    letter-spacing: 0.1em;
+    span {
+      @include rem(14);
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+    li {
+      .content__ttl {
+        text-align: center;
+        @include rem(20);
+        color: $color-white;
+        background-color: #257b8f;
+        line-height: 1.5rem;
+        padding: 7px 0;
+        letter-spacing: 0.1em;
+        span {
+          @include rem(14);
+          display: inline-block;
+          margin-left: 10px;
+        }
+      }
+      p {
+        @include rem(14);
+        line-height: 1.5rem;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+//*------------------*
+//*  contents1
+//*------------------*
+.contents1 {
+  max-width: 960px;
+  .content__ttl {
+    @include tablet {
+      line-height: 1.5rem;
+      padding: 10px 0;
+    }
+    span {
+      @include tablet {
+        margin-left: 0;
+      }
+    }
+  }
+  ul {
+    @include mobile {
+      display: block;
+    }
+    li {
+      width: 48%;
+      @include mobile {
+        width: 100%;
+        margin-top: 50px;
+      }
+      p {
+        border: 1px solid #257b8f;
+        line-height: 1.8rem;
+        @include mobile {
+          padding: 20px 50px;
+        }
+      }
+    }
+  }
+}
+//*------------------*
+//*  contents2
+//*------------------*
+.content2 {
+  ul {
+    margin-top: 30px;
+    @include tablet {
+      display: block;
+    }
+    li {
+    width: 30%;
+    @include tablet {
+      width: 100%;
+      margin-top: 60px;
+    }
+      img {
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+      }
+      h4 {
+        @include rem(18);
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 40px;
+      }
+      p {
+        line-height: 2rem;
+        .under-line {
+          border-bottom: 1px solid #000;
+        }
+      }
+    }
+  }
+}
+
+//*------------------*
+//*  contents3
+//*------------------*
+.content3 {
+  ul {
+    margin-top: 80px;
+    display: block;
+    li {
+      margin-top: 80px;
+      display: flex;
+      justify-content: left;
+      align-items: start;
+      date {
+        @include rem(16);
+      }
+      &:nth-child(3)>p { //省略部分
+        margin-left: 0;
+        @include rem(30);
+      }
+      &:nth-child(7)>p {
+        margin-left: 37px;
+      }
+      p {
+        @include rem(15);
+        padding: 0;
+        margin-left: 50px;
+        line-height: 2rem;
+      }
+    }
+  }
+}
+
+//*------------------*
+//*  contact
+//*------------------*
+.contact {
+  button {
+    a {
+      background-color: #333;
+      letter-spacing: 0.2em;
+    }
+  }
+}
